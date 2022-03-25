@@ -21,7 +21,18 @@ def upload_file():
         f.save(app.config['UPLOAD_FOLDER'] + filename)
         print("File Saved!")
         result = getData.main(app.config['UPLOAD_FOLDER'] + filename)
-        res = jsonify(result) 
+        res = jsonify(result)
+
+
+        filetoremove = UPLOAD_FOLDER + filename
+
+        ## If file exists, delete it ##
+        if os.path.isfile(filetoremove):
+            os.remove(filetoremove)
+        else:    ## Show an error ##
+            print("Error: %s file not found" % filetoremove)
+        
+        print(filetoremove)
     return res
  
 @app.after_request
