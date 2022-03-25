@@ -19,8 +19,6 @@ def main(filepath):
             else: # Flag to know BMI 
                 row_data["flag"] = 1
 
-            if row_data['encounterId'] == "3595":
-                print(row_data)
             table_data.append(row_data) 
     return table_data
 
