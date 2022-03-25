@@ -12,7 +12,7 @@
 
 ### Backend
 
-1. Install the requirements using pip. pip install flask Werkzeug flask-cors.
+1. Install the requirements using pip. "pip install flask Werkzeug flask-cors".
 2. Create a folder named "temp" in "ccu-dashboard/new-backend" if one does not already exist.
 3. Run app.py. This can be done for example by doing "python3 app.py". 
 
