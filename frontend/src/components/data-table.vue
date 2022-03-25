@@ -5,7 +5,7 @@
       <template #default="{ row }">
         <p v-for="(item, index) in row" :key="index">
           {{ index.replaceAll('_', ' ') }}: {{ item }}
-        </p>
+        </p> 
       </template>
     </el-table-column>
     <el-table-column label="Encounter ID" prop="encounterId" /> 
@@ -24,9 +24,8 @@
     >
       <template #default="scope">
         <el-tag   
-          :type="scope.row.referral === '1.0' ? '' : 'success'"
-          disable-transitions
-          >{{ scope.row.referral === '1.0' ? 'Referred' : 'Unreferred' }}
+          :type="scope.row.referral === '1.0' ? '' : 'success'" disable-transitions
+          effect = "dark">{{ scope.row.referral === '1.0' ? 'Referred' : 'Unreferred' }}
         </el-tag>
       </template>
     </el-table-column>
