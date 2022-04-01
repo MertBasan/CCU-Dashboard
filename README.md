@@ -3,7 +3,7 @@
 ## How to run
 1. Open two terminals. [How to split terminals using Visual Studio Code](https://code.visualstudio.com/updates/v1_21#_split-terminals)
 2. In the first terminal navigate to "ccu-dashboard/frontend" and run the command "npm run dev".
-3. In the second terminal navigate to "ccu-dashboard/new-backend" and run the command "python3 app.py".
+3. In the second terminal navigate to "ccu-dashboard/backend" and run the command "python3 app.py".
 4. If successful you can open http://localhost:3000 and view the website. 
 
 ## How to setup
@@ -18,7 +18,7 @@
 ### Backend
 
 1. Install the requirements using pip. "pip install flask Werkzeug".
-2. Create a folder named "temp" in "ccu-dashboard/new-backend" if one does not already exist.
+2. Create a folder named "temp" in "ccu-dashboard/backend" if one does not already exist.
 3. Run app.py. This can be done for example by doing "python3 app.py". 
 
 
