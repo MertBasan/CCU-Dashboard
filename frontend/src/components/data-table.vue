@@ -3,9 +3,11 @@
   <el-table :data="pagedData" row-key="encounterId" height="500" style="width: 100%" :row-class-name="tableRowClassName">
     <el-table-column type="expand">
       <template #default="{ row }">
-        <p v-for="(item, index) in row" :key="index">
-          {{ index.replaceAll('_', ' ') }}: {{ item }}
-        </p> 
+        <div class="expandedContainer">
+          <span v-for="(item, index) in row" :key="index">
+            {{ index.replaceAll('_', ' ') }}: {{ item }}
+          </span>
+        </div>
       </template>
     </el-table-column>
     <el-table-column label="Encounter ID" prop="encounterId" /> 
@@ -75,6 +77,18 @@ const filterTag = (value, row) => {
 </script>
 
 <style>
+.expandedContainer{  
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 20px;
+  }
+
+span {
+  font-size: 16px;
+  flex: 0 0 33.333333%;
+  
+}
+
 p {
   margin-left: 55px;
 }

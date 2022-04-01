@@ -3,8 +3,7 @@
   <div class="container">
     <div class="nav">
       <el-input class="input" v-model="search" placeholder="Search by EncounterID..." />
-      <top-bar class="btn" @uploadSuccess="handleData" />
-      <download class="btn" />
+      <upload-button class="btn" @uploadSuccess="handleData" />
     </div>
     <el-row>
       <el-col :span="24">
